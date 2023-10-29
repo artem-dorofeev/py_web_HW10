@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "hw10-local"
+version = "0.1.0"
+description = "hw10 python web"
+authors = ["Artem Dorofeev <130536391+artem-dorofeev@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.6"
+pymongo = "^4.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
