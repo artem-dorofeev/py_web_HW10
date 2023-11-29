@@ -1,8 +1,13 @@
+!!!мої нотатки. скопіювати та видалити !!!
 оточення:
     poetry add django pymongo psycopg2 mongoengine
 
 створюємо web проєкт:
     django-admin startproject hw10
+
+створюємо quotes users:
+    py .\manage.py startapp quotes
+    py .\manage.py startapp users
 
 запуск сервера:
     cd .\hw10\
@@ -28,3 +33,21 @@ hw10/db.sqlite3 - наша бд
 додати дані в вд:
     py -m utils.migration
 
+запускаю постгрес, и в файле settings.py роблю зміни:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '567234',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
+роблю миграцію:
+    py .\manage.py migrate
+
+створюю суперюзера:
+    python manage.py createsuperuser
+    artem   a.dorofeev@ukr.net  qawsedrftg
